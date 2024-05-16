@@ -1,0 +1,22 @@
+<div class="image-carousel-block block {{ classes }}">
+<div class='container'>
+    <div class="slick-carousel">
+        {% for image in fields.images %}
+            <div>
+                <img src="{{ image.url }}" alt="{{ image.alt }}">
+            </div>
+        {% endfor %}
+    </div>
+</div>
+</div>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        jQuery('.slick-carousel').slick({
+            dots: true,
+            infinite: true,
+            speed: 300,
+            slidesToShow: 1,
+            adaptiveHeight: true
+        });
+    });
+</script>

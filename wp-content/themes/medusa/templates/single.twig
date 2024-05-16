@@ -1,0 +1,13 @@
+{% include 'header.twig' %}
+
+<main class='container blog'>
+    <article class='row'>
+    <div class='col col-12 blog__header' style='background-image:url({{Image(post.header_image).src}});'>
+    <h1>{{ post.title }}</h1>
+    </div>
+        <div class='col col-12'>{{ post.post }}</div>
+        
+    </article>
+</main>
+
+{% include 'footer.twig' %}

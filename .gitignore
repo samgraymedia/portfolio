@@ -1,0 +1,10 @@
+# Ignore node_modules in all themes
+/wp-content/themes/*/node_modules
+# Ignore uploads directory
+/wp-content/uploads
+# Ignore cache directories
+/wp-content/cache
+/wp-content/themes/*/cache
+/wp-content/themes/*/dist/
+# Ignore log files
+*.log

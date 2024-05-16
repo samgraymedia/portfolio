@@ -1,0 +1,13 @@
+
+
+<div class="button-block block">
+    <div class="container">
+    <div class='row just-center'>
+    {% for item in fields.buttons %}
+    <div class='col col-2 text-center'>
+    <a href="{{item.button_link}}" class='btn btn-{{item.button_style}}'>{{item.button_text}}</a>
+    </div>
+    {% endfor %}
+       </div>
+    </div>
+</div>

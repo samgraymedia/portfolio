@@ -1,0 +1,20 @@
+.image-carousel-block {
+  .slick-carousel {
+    .slick-prev:before,
+    .slick-next:before {
+      color: $secondary;
+    }
+    .slick-slide {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 400px; // Set a fixed height for the slides
+
+      img {
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: cover; // Ensure the image covers the container while maintaining aspect ratio
+      }
+    }
+  }
+}

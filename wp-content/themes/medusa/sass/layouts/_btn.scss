@@ -1,0 +1,24 @@
+.btn {
+  display: inline-block;
+  padding: $button-padding;
+  border: none;
+  border-radius: $button-border-radius;
+  color: $button-text-color;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: $base-font-size + 2px;
+  letter-spacing: 2px;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+  &:hover,
+  &:focus {
+    opacity: $button-hover-opacity;
+  }
+  &-primary {
+    background-color: $primary;
+  }
+  &-secondary {
+    background-color: $secondary;
+  }
+}

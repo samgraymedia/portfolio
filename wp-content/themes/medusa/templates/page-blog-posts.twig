@@ -1,0 +1,16 @@
+{% include 'header.twig' %}
+
+<main class="container">
+    <div class="row">
+        {% for post in posts %}
+            <article class="col col-12 col-md-6 col-lg-4">
+                <h2><a href="{{ post.link }}">{{ post.title }}</a></h2>
+                <div>{{ post.excerpt }}</div>
+            </article>
+        {% else %}
+            <p>No blog posts found.</p>
+        {% endfor %}
+    </div>
+</main>
+
+{% include 'footer.twig' %}

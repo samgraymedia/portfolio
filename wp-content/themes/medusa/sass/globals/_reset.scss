@@ -1,0 +1,22 @@
+/* globals/_reset.scss */
+
+/* Basic CSS reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 100%;
+  line-height: 1.5;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+img {
+  width: 100%;
+  height: auto;
+}

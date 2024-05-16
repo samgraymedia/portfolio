@@ -1,0 +1,16 @@
+.blog {
+  &__header {
+    height: 30vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: $grid-margin;
+    background-position: center;
+    background-size: cover;
+    h1 {
+      padding: 30px;
+      background-color: rgba(0, 0, 0, 0.5);
+      color: $white;
+    }
+  }
+}

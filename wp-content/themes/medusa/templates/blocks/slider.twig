@@ -1,0 +1,38 @@
+<div class="slider-block {{ classes }} block {% if fields.no_top_margin %}topSlick{% endif %}">
+    <div class="slick-slider">
+        {% for slide in fields.slides %}
+            <div class="slide" style="background-image: url('{{ slide.background_image }}');">
+                <div class="slide-content">
+                    {% if slide.title %}
+                        <h2>{{ slide.title }}</h2>
+                    {% endif %}
+                    {% if slide.text %}
+                        <p>{{ slide.text }}</p>
+                    {% endif %}
+                    <div class="slide-buttons">
+                        {% if slide.button_1 %}
+                            <a href="{{ slide.button_1.url }}" class="btn btn-primary">{{ slide.button_1.title }}</a>
+                        {% endif %}
+                        {% if slide.button_2 %}
+                            <a href="{{ slide.button_2.url }}" class="btn btn-secondary">{{ slide.button_2.title }}</a>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        jQuery('.slick-slider').slick({
+            dots: false,
+            infinite: true,
+            speed: 800,
+            slidesToShow: 1,
+            adaptiveHeight: true,
+            autoplay: true,            
+            autoplaySpeed: 2000  
+        });
+    });
+</script>

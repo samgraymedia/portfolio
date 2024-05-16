@@ -1,0 +1,25 @@
+<div class="google-map-block block">
+    <div id="map-{{ block.id }}" style="height: 400px; width: 100%;"></div>
+</div>
+
+<script>
+    function initMap_{{ block.id }}() {
+        var location = { lat: {{ fields.latitude }}, lng: {{ fields.longitude }} };
+        var map = new google.maps.Map(document.getElementById('map-{{ block.id }}'), {
+            zoom: 14,
+            center: location
+        });
+        var marker = new google.maps.Marker({
+            position: location,
+            map: map
+        });
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+        if (typeof google !== 'undefined') {
+            initMap_{{ block.id }}();
+        } else {
+            console.error('Google Maps API is not loaded.');
+        }
+    });
+</script>

@@ -1,0 +1,19 @@
+{% include 'header.twig' %}
+
+<main class='not-found'>
+<div class='container'>
+<div class='row text-center'>
+<div class='col col-12'>
+<img  src='{{ function('get_field', 'logo', 'option') }}' /> </div>
+
+
+
+
+    <h1 class='col col-12'>{{ title }}</h1>
+    <p class='col col-12'>{{ message }}</p>
+    <p class='col col-12'>You might want to go back to the <a href="{{ site.url }}">homepage</a>.</p>
+    </div>
+    </div>
+</main>
+
+{% include 'footer.twig' %}

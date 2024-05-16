@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html {{ function('language_attributes') }}>
+<head>
+    <meta charset="{{ function('bloginfo', 'charset') }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ function('wp_title', '|', true) }}</title>
+       <!-- Standard favicon -->
+    <link rel="icon" type="image/x-icon" href="/path/to/favicon.ico">
+    
+    <!-- PNG format -->
+    <link rel="icon" type="image/png" href="{{ function('get_field', 'favicon-32x32', 'option') }}">
+    
+    <!-- SVG format -->
+    <link rel="icon" type="image/svg+xml" href="/path/to/favicon.svg">
+    
+    <!-- Additional sizes for Apple devices -->
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ function('get_field', 'apple-touch-icon', 'option') }}">
+    
+    <!-- Android and other devices -->
+    <link rel="icon" sizes="192x192" href="/path/to/android-chrome-192x192.png">
+    <link rel="stylesheet" href="{{ site.url }}/dist/main.min.css">
+    {{ function('wp_head') }}
+</head>
+<body {{ function('body_class') }}>
+
+<header>
+    <div class="container">
+    <div class='row just-between'>
+    <div class="logo">
+            <a href="{{ site.url }}">
+                <img src="{{ function('get_field', 'logo', 'option') }}" alt="{{ site.name }}">
+            </a>
+        </div>
+        <nav class="main-nav">
+            {{ function('wp_nav_menu', { 'theme_location': 'primary', 'container': false, 'menu_class': 'nav-menu' }) }}
+        </nav>
+    </div>
+        
+    </div>
+</header>
+

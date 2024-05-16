@@ -1,0 +1,21 @@
+.error404 {
+  background-color: $primary;
+
+  .not-found {
+    margin-bottom: $grid-margin;
+    height: calc(100vh - 76px - 24px - 60px);
+    img {
+      width: 100px;
+    }
+    h1,
+    p {
+      color: $secondary;
+      a {
+        color: $white;
+        &:hover {
+          color: darken($white, 50%);
+        }
+      }
+    }
+  }
+}

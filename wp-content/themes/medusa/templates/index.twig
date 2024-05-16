@@ -1,0 +1,13 @@
+{% include 'header.twig' %}
+
+<main>
+    <h1>Home Page</h1>
+    {% for post in posts %}
+        <article>
+            <h2><a href="{{ post.link }}">{{ post.title }}</a></h2>
+            <div>{{ post.excerpt }}</div>
+        </article>
+    {% endfor %}
+</main>
+
+{% include 'footer.twig' %}
